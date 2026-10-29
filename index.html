@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Central de Tecnologia</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+    <link rel="icon" href="img/LOGO_GM.png">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<header class="topbar">
+
+    <button
+        type="button"
+        id="logoAdmin"
+        class="logo-button"
+        title="Central de Tecnologia"
+    >
+
+    <img src="img/logo_g+01.png" class="logo-icon">
+
+    </button>
+
+
+    <div class="brand">
+
+        <span>
+            CENTRAL DE TECNOLOGIA
+        </span>
+
+        <small>
+            Atendimento TI
+        </small>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
+
+<main class="container">
+
+
+    <!-- =================================================
+         HOME
+    ================================================= -->
+
+    <section
+        id="home"
+        class="page-section"
+    >
+
+        <div class="hero">
+
+            <span class="eyebrow">
+                PORTAL DE ATENDIMENTO
+            </span>
+
+            <h1>
+                Como podemos ajudar?
+            </h1>
+
+            <p>
+                Abra uma ordem de serviço ou consulte
+                o andamento de uma solicitação já registrada.
+            </p>
+
+        </div>
+
+
+        <div class="home-grid">
+
+
+            <!-- NOVA OS -->
+
+            <button
+                type="button"
+                id="btnNovaOS"
+                class="home-card"
+            >
+
+                <span class="home-card-icon">
+                    +
+                </span>
+
+                <span class="home-card-title">
+                    NOVO ATENDIMENTO
+                </span>
+
+                <strong>
+                    Criar ordem de serviço
+                </strong>
+
+                <p>
+                    Informe seus dados e descreva o problema
+                    para abrir um chamado com a equipe de TI.
+                </p>
+
+                <span class="home-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <!-- STATUS -->
+
+            <button
+                type="button"
+                id="btnStatus"
+                class="home-card"
+            >
+
+                <span class="home-card-icon">
+                    #
+                </span>
+
+                <span class="home-card-title">
+                    ACOMPANHAMENTO
+                </span>
+
+                <strong>
+                    Status das ordens
+                </strong>
+
+                <p>
+                    Consulte o andamento de uma ordem utilizando
+                    o número recebido após a abertura.
+                </p>
+
+                <span class="home-arrow">
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div>
+                <strong>01</strong>
+                Abra o chamado
+            </div>
+
+            <div>
+                <strong>02</strong>
+                TI recebe a solicitação
+            </div>
+
+            <div>
+                <strong>03</strong>
+                Acompanhe sua OS
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ABERTURA DA OS
+    ================================================= -->
+
+    <section
+        id="osPage"
+        class="page-section hidden"
+    >
+
+
+        <button
+            type="button"
+            id="btnVoltarHome"
+            class="back-button"
+        >
+            ← Voltar
+        </button>
+
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                ABERTURA DE OS
+            </span>
+
+            <h2>
+                Registrar solicitação
+            </h2>
+
+            <p>
+                Preencha todos os campos obrigatórios.
+            </p>
+
+        </div>
+
+
+
+        <!-- =============================================
+             ETAPA 01
+        ============================================== -->
+
+        <section class="form-section">
+
+
+            <div class="section-step">
+
+                <span class="step-number">
+                    01
+                </span>
+
+                <div>
+
+                    <h3>
+                        Seus dados
+                    </h3>
+
+                    <p>
+                        Informe quem está solicitando o atendimento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="nome">
+                        Nome *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        autocomplete="name"
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="loja">
+                        Loja / Unidade *
+                    </label>
+
+                    <select id="loja">
+
+                        <option value="">
+                            Selecione a loja
+                        </option>
+
+                        <option value="Farmais 1">
+                            Farmais 1
+                        </option>
+
+                        <option value="Farmais 2">
+                            Farmais 2
+                        </option>
+
+                        <option value="Farmais 3">
+                            Farmais 3
+                        </option>
+
+                        <option value="Doce Lar">
+                            Doce Lar
+                        </option>
+
+                        <option value="Poupa Mais">
+                            Poupa Mais
+                        </option>
+
+                        <option value="Posto Fenix">
+                            Posto Fenix
+                        </option>
+
+                        <option value="Conveniência Fenix">
+                            Conveniência Fenix
+                        </option>
+
+                        <option value="Automais">
+                            Automais
+                        </option>
+
+                        <option value="Escritório">
+                            Escritório
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =============================================
+             ETAPA 02
+        ============================================== -->
+
+        <section
+            id="areaLocal"
+            class="form-section hidden"
+        >
+
+            <div class="section-step">
+
+                <span class="step-number">
+                    02
+                </span>
+
+                <div>
+
+                    <h3>
+                        Onde está o problema?
+                    </h3>
+
+                    <p>
+                        Escolha primeiro o local onde ocorreu
+                        o problema.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="locationGrid"
+                class="location-grid"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- =============================================
+             ETAPA 03
+        ============================================== -->
+
+        <section
+            id="areaSubLocal"
+            class="form-section hidden"
+        ></section>
+
+
+
+        <!-- =============================================
+             ETAPA 04
+        ============================================== -->
+
+        <section
+            id="areaProblema"
+            class="form-section hidden"
+        >
+
+            <div class="section-step">
+
+                <span class="step-number">
+                    04
+                </span>
+
+                <div>
+
+                    <h3>
+                        Qual é o problema?
+                    </h3>
+
+                    <p>
+                        Selecione o tipo de problema.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="problemaGrid"
+                class="problem-grid"
+            >
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="Computador"
+                >
+
+                    <span>
+                        PC
+                    </span>
+
+                    <strong>
+                        Computador
+                    </strong>
+
+                    <small>
+                        Problemas em computador ou notebook
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="Impressora"
+                >
+
+                    <span>
+                        IMP
+                    </span>
+
+                    <strong>
+                        Impressora
+                    </strong>
+
+                    <small>
+                        Problemas de impressão
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="Impressora Fiscal"
+                >
+
+                    <span>
+                        FIS
+                    </span>
+
+                    <strong>
+                        Impressora fiscal
+                    </strong>
+
+                    <small>
+                        Impressora de cupom / caixa
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="TEF"
+                >
+
+                    <span>
+                        TEF
+                    </span>
+
+                    <strong>
+                        TEF
+                    </strong>
+
+                    <small>
+                        Problema com máquina TEF
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="POS"
+                >
+
+                    <span>
+                        POS
+                    </span>
+
+                    <strong>
+                        POS
+                    </strong>
+
+                    <small>
+                        Problema com máquina POS
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="Rede"
+                >
+
+                    <span>
+                        NET
+                    </span>
+
+                    <strong>
+                        Rede / Internet
+                    </strong>
+
+                    <small>
+                        Problemas de conexão
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="Sistema"
+                >
+
+                    <span>
+                        SYS
+                    </span>
+
+                    <strong>
+                        Sistema
+                    </strong>
+
+                    <small>
+                        Erros ou problemas em sistemas
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="problem-card"
+                    data-problema="Outros"
+                >
+
+                    <span>
+                        ...
+                    </span>
+
+                    <strong>
+                        Outros
+                    </strong>
+
+                    <small>
+                        Outro tipo de problema
+                    </small>
+
+                </button>
+
+
+            </div>
+
+
+            <div
+                id="problemaDetalhes"
+                class="problem-details hidden"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =============================================
+             ETAPA 05
+        ============================================== -->
+
+        <section
+            id="areaDescricao"
+            class="form-section hidden"
+        >
+
+            <div class="section-step">
+
+                <span class="step-number">
+                    05
+                </span>
+
+                <div>
+
+                    <h3>
+                        Descreva o problema
+                    </h3>
+
+                    <p>
+                        Explique o que está acontecendo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="descricao">
+                    Descrição do problema *
+                </label>
+
+                <textarea
+                    id="descricao"
+                    rows="6"
+                    placeholder="Explique detalhadamente o que está acontecendo..."
+                ></textarea>
+
+            </div>
+
+
+
+            <div
+                id="regraFoto"
+                class="photo-rule hidden"
+            ></div>
+
+
+
+            <div class="form-group">
+
+                <label for="foto">
+                    Foto / Evidência
+                </label>
+
+                <input
+                    type="file"
+                    id="foto"
+                    accept="image/*"
+                >
+
+                <small class="field-help">
+                    Você poderá enviar uma foto do problema.
+                </small>
+
+            </div>
+
+
+
+            <div
+                id="fotoPreview"
+                class="photo-preview hidden"
+            ></div>
+
+
+
+            <button
+                type="button"
+                id="btnFinalizar"
+                class="btn-danger"
+            >
+
+                Abrir ordem de serviço
+
+            </button>
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         STATUS
+    ================================================= -->
+
+    <section
+        id="statusPage"
+        class="page-section hidden"
+    >
+
+        <button
+            type="button"
+            id="btnVoltarStatus"
+            class="back-button"
+        >
+            ← Voltar
+        </button>
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                ACOMPANHAMENTO
+            </span>
+
+            <h2>
+                Consulte sua ordem
+            </h2>
+
+            <p>
+                Informe o número da OS recebida.
+            </p>
+
+        </div>
+
+
+        <div class="status-search">
+
+            <label for="numeroConsulta">
+                Número da OS
+            </label>
+
+            <div class="status-search-row">
+
+                <input
+                    type="text"
+                    id="numeroConsulta"
+                    placeholder="Ex.: OS-2026-000001"
+                >
+
+                <button
+                    type="button"
+                    id="btnConsultar"
+                    class="btn-primary"
+                >
+                    Consultar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="statusResultado"
+            class="hidden"
+        ></div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     MODAL LOGIN ADMIN
+===================================================== -->
+
+<div
+    id="adminModal"
+    class="modal hidden"
+>
+
+    <div class="modal-content">
+
+        <button
+            type="button"
+            id="fecharAdmin"
+            class="modal-close"
+        >
+            ×
+        </button>
+
+
+        <span class="eyebrow">
+            ÁREA RESTRITA
+        </span>
+
+
+        <h2>
+            Acesso administrativo
+        </h2>
+
+
+        <p>
+            Informe suas credenciais para acessar
+            o painel de TI.
+        </p>
+
+
+        <div class="form-group">
+
+            <label for="adminLogin">
+                Login
+            </label>
+
+            <input
+                type="text"
+                id="adminLogin"
+                autocomplete="username"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="adminSenha">
+                Senha
+            </label>
+
+            <input
+                type="password"
+                id="adminSenha"
+                autocomplete="current-password"
+            >
+
+        </div>
+
+
+        <div
+            id="adminErro"
+            class="login-error hidden"
+        >
+            Login ou senha incorretos.
+        </div>
+
+
+        <button
+            type="button"
+            id="btnEntrarAdmin"
+            class="btn-danger full"
+        >
+            Entrar
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MODAL OS GERADA
+===================================================== -->
+
+<div
+    id="osModal"
+    class="modal hidden"
+>
+
+    <div class="modal-content success-modal">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <span class="eyebrow">
+            SOLICITAÇÃO REGISTRADA
+        </span>
+
+
+        <h2>
+            Ordem de serviço aberta
+        </h2>
+
+
+        <p>
+            Guarde o número abaixo para acompanhar
+            o atendimento.
+        </p>
+
+
+        <div
+            id="numeroOSGerada"
+            class="os-number"
+        >
+        </div>
+
+
+        <button
+            type="button"
+            id="btnFecharOS"
+            class="btn-primary full"
+        >
+            Continuar
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script
+    src="js/script.js"
+></script>
+
+</body>
+
+</html>
