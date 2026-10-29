@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | Central TI</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="admin-header">
+
+        <div class="header-left">
+
+            <div class="logo-ti">
+                TI
+            </div>
+
+            <div>
+                <span class="company-name">
+                    CENTRAL DE TECNOLOGIA
+                </span>
+
+                <h1>Painel Administrativo</h1>
+            </div>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button
+                id="btnAtualizar"
+                class="btn btn-secondary">
+                Atualizar
+            </button>
+
+            <button
+                id="btnSair"
+                class="btn btn-danger">
+                
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main class="container">
+
+        <!-- TÍTULO -->
+        <section class="page-title">
+
+            <span class="section-label">
+                ATENDIMENTO TI
+            </span>
+
+            <h2>Ordens de serviço</h2>
+
+            <p>
+                Acompanhe e gerencie os chamados abertos pelos usuários.
+            </p>
+
+        </section>
+
+
+        <!-- ESTATÍSTICAS -->
+        <section class="stats-grid">
+
+            <!-- PENDENTES -->
+            <div class="stat-card">
+
+                <div class="stat-info">
+
+                    <span class="stat-label">
+                        PENDENTES
+                    </span>
+
+                    <strong id="totalPendentes">
+                        0
+                    </strong>
+
+                </div>
+
+                <span class="stat-description">
+                    Chamados aguardando atendimento
+                </span>
+
+            </div>
+
+
+            <!-- EM ANDAMENTO -->
+            <div class="stat-card">
+
+                <div class="stat-info">
+
+                    <span class="stat-label">
+                        EM ANDAMENTO
+                    </span>
+
+                    <strong id="totalAndamento">
+                        0
+                    </strong>
+
+                </div>
+
+                <span class="stat-description">
+                    Chamados em atendimento
+                </span>
+
+            </div>
+
+
+            <!-- AGUARDANDO -->
+            <div class="stat-card">
+
+                <div class="stat-info">
+
+                    <span class="stat-label">
+                        AGUARDANDO
+                    </span>
+
+                    <strong id="totalAguardando">
+                        0
+                    </strong>
+
+                </div>
+
+                <span class="stat-description">
+                    Chamados aguardando alguma ação
+                </span>
+
+            </div>
+
+
+            <!-- CONCLUÍDAS -->
+            <div class="stat-card">
+
+                <div class="stat-info">
+
+                    <span class="stat-label">
+                        CONCLUÍDAS
+                    </span>
+
+                    <strong id="totalConcluidas">
+                        0
+                    </strong>
+
+                </div>
+
+                <span class="stat-description">
+                    Atendimentos finalizados
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAMADOS -->
+        <section class="orders-section">
+
+            <div class="orders-header">
+
+                <div>
+
+                    <span class="section-label">
+                        CHAMADOS
+                    </span>
+
+                    <h2>
+                        Ordens registradas
+                    </h2>
+
+                </div>
+
+
+                <!-- FILTRO -->
+                <div class="filter-container">
+
+                    <label for="filtroStatus">
+                        Filtrar por status
+                    </label>
+
+                    <select id="filtroStatus">
+
+                        <option value="todos">
+                            Todos
+                        </option>
+
+                        <option value="pendente">
+                            Pendente
+                        </option>
+
+                        <option value="em_andamento">
+                            Em andamento
+                        </option>
+
+                        <option value="aguardando">
+                            Aguardando
+                        </option>
+
+                        <option value="concluida">
+                            Concluída
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- LISTA -->
+            <div
+                id="listaOrdens"
+                class="orders-list">
+
+                <!--
+                    As ordens serão inseridas
+                    automaticamente pelo JavaScript.
+                -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL DETALHES -->
+    <div
+        id="modalDetalhes"
+        class="modal-overlay hidden">
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="section-label">
+                        ORDEM DE SERVIÇO
+                    </span>
+
+                    <h2 id="modalTitulo">
+                        OS #0000
+                    </h2>
+
+                </div>
+
+                <button
+                    id="btnFecharModal"
+                    class="modal-close">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="modalConteudo"
+                class="modal-content">
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <label for="modalStatus">
+                    Alterar status
+                </label>
+
+                <select id="modalStatus">
+
+                    <option value="pendente">
+                        Pendente
+                    </option>
+
+                    <option value="em_andamento">
+                        Em andamento
+                    </option>
+
+                    <option value="aguardando">
+                        Aguardando
+                    </option>
+
+                    <option value="concluida">
+                        Concluída
+                    </option>
+
+                </select>
+
+                <button
+                    id="btnSalvarStatus"
+                    class="btn btn-danger">
+                    Salvar status
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>
